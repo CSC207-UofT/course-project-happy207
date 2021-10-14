@@ -85,7 +85,6 @@ public class Flight {
 
     public int getAvailableSeats() {return availableSeats;}
     //public void ResetAvailableSeats(int availableSeats) {this.availableSeats = availableSeats;}
-    public void SubtractOneAvailableSeat(){this.availableSeats --;}
 
     public int getDistanceTraveled() {return distanceTraveled;}
 
