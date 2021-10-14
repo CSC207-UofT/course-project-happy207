@@ -2,6 +2,7 @@ import org.junit.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class FlightTest {
     Flight flight;
@@ -58,12 +59,12 @@ public class FlightTest {
     }
 
     @Test(timeout = 50)
-    public void TestReserveOneSeat(){
-        if(flight.ReserveOneSeat("1A")){
-        assertEquals(9, flight.getAvailableSeats());
-        assertEquals("Booked", flight.getSeatNumberArray().get(0));
+    public void TestReserveOneSeat() {
+        if (flight.ReserveOneSeat("1A")) {
+            assertEquals(9, flight.getAvailableSeats());
+            assertEquals("Booked", flight.getSeatNumberArray().get(0));
         }
-
+        assertFalse(flight.ReserveOneSeat("10A"));
     }
 
 }
