@@ -92,12 +92,12 @@ public class Flight {
     public String getBoardingGate() {return boardingGate;}
 
     public ArrayList<String> getSeatNumberArray() {return seatNumberArray;}
-    //public void setSeatNumberArray(ArrayList<String> seatNumberArray) {this.seatNumberArray = seatNumberArray;
-    // }
+    //public void setSeatNumberArray(ArrayList<String> seatNumberArray) {this.seatNumberArray = seatNumberArray;}
     public boolean ReserveOneSeat(String seatNumber){
         if(seatNumberArray.contains(seatNumber)){
             int index = seatNumberArray.indexOf(seatNumber);
-            seatNumberArray.set(index,"Booked") ;
+            seatNumberArray.set(index,"Booked");
+            this.availableSeats --;
             return true;
         }
         return false;
