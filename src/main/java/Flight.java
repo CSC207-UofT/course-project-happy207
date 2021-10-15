@@ -13,6 +13,7 @@
 
 import java.time.LocalDateTime;
 //import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 
@@ -71,27 +72,74 @@ public class Flight {
         this.departureTime = LocalDateTime.of(dYear,dMonth,dDay,dHour,dMinute);
     }
 
+    /**
+     * A getter method.
+     * @return flight number.
+     */
     public String getFlightNumber() {return flightNumber;}
 
+    /**
+     * A getter method.
+     * @return the origin city of the fight.
+     */
     public String getOriginCity(){return originCity;}
 
+    /**
+     * A getter method.
+     * @return the destination city of the fight.
+     */
     public String getDestinationCity(){return destinationCity;}
 
+    /**
+     * A getter method.
+     * @return the departure time of the fight.
+     */
     public LocalDateTime getDepartureTime(){return departureTime;}
 
+    /**
+     * A getter method.
+     * @return the arrival time of the fight.
+     */
     public LocalDateTime getArrivalTime(){return arrivalTime;}
 
+    /**
+     * A getter method.
+     * @return the total number of seats of the fight.
+     */
     public int getTotalSeats() {return totalSeats;}
+
+    /**
+     * A getter method.
+     * @return the number of available seats of the fight.
+     */
 
     public int getAvailableSeats() {return availableSeats;}
     //public void ResetAvailableSeats(int availableSeats) {this.availableSeats = availableSeats;}
 
+    /**
+     * A getter method.
+     * @return the distance traveled of the fight.
+     */
     public int getDistanceTraveled() {return distanceTraveled;}
 
+    /**
+     * A getter method.
+     * @return the boarding gate of the fight.
+     */
     public String getBoardingGate() {return boardingGate;}
 
+    /**
+     * A getter method.
+     * @return the array of seat numbers of the fight. ("x" if the seat is occupied)
+     */
     public ArrayList<String> getSeatNumberArray() {return seatNumberArray;}
     //public void setSeatNumberArray(ArrayList<String> seatNumberArray) {this.seatNumberArray = seatNumberArray;}
+
+    /*
+     *  Replace the seat number by "X" from seatNumberArray to represent that this seat has been booked.
+     * @param seatNumber A String of seat number.
+     * @return true if this seat number was seatNumberArray, and now has been replaced by "X" , false otherwise.
+     */
     public boolean ReserveOneSeat(String seatNumber){
         if(seatNumberArray.contains(seatNumber)){
             int index = seatNumberArray.indexOf(seatNumber);
@@ -102,37 +150,24 @@ public class Flight {
         return false;
     }
 
-
-
-/*
+    /*
+     * Override the toString method
+     * @return String of flight information.
+     */
     @Override
-    public String toString(){
-        return "Flight Number: " + this.getFlightNumber() + '}';
-    }
-    */
-/**
- Print all info about the flight
- *//*
-
-    public void printInfo() {
-        System.out.println("Flight Number: " + flightNumber);
-        System.out.println("Origin: " + originCity);
-        System.out.println("Destination: " + destinationCity);
-        System.out.println("Number of seats available: "+ availableSeats);
-        System.out.println("Total number of seats of this flight: "+ totalSeats);
-
-        System.out.println("Distance traveled: "+ distanceTraveled);
-
-
+    public String toString() {
         DateTimeFormatter FormatObj = DateTimeFormatter.ofPattern("yyyy MMM dd  HH:mm:ss");
         String formattedArrivalTime = arrivalTime.format(FormatObj);
         String formattedDepartureTime = departureTime.format(FormatObj);
-        System.out.println("Arrival Time is: "+formattedArrivalTime);
-        System.out.println("Departure Time is: "+formattedDepartureTime);
+        return "Flight " + flightNumber +
+                " \n from " + originCity + " to " + destinationCity +
+                "\n from " + formattedDepartureTime + " to " + formattedArrivalTime +
+                "\n boarding gate: " + boardingGate;
+        }
 
     }
-*/
 
 
 
-}
+
+
