@@ -95,7 +95,7 @@ public class Flight {
     public boolean ReserveOneSeat(String seatNumber){
         if(seatNumberArray.contains(seatNumber)){
             int index = seatNumberArray.indexOf(seatNumber);
-            seatNumberArray.set(index,"Booked");
+            seatNumberArray.set(index,"X");
             this.availableSeats --;
             return true;
         }
