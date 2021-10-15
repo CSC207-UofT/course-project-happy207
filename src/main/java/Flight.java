@@ -19,14 +19,14 @@ import java.util.ArrayList;
 
 
 public class Flight {
-    private final String flightNumber;
-    private final String originCity;
-    private final String destinationCity;
-    private final LocalDateTime departureTime;
-    private final LocalDateTime arrivalTime;
-    private final int distanceTraveled;
-    private final int totalSeats;
-    private final String boardingGate;
+    private  String flightNumber;
+    private  String originCity;
+    private  String destinationCity;
+    private LocalDateTime departureTime;
+    private LocalDateTime arrivalTime;
+    private int distanceTraveled;
+    private int totalSeats;
+    private String boardingGate;
     private ArrayList<String> seatNumberArray;
     private int availableSeats;
 
@@ -71,6 +71,12 @@ public class Flight {
         this.arrivalTime =  LocalDateTime.of(aYear,aMonth,aDay,aHour,aMinute);
         this.departureTime = LocalDateTime.of(dYear,dMonth,dDay,dHour,dMinute);
     }
+
+    /**
+     * Construct an empty Flight
+     */
+    public Flight(){}
+
 
     /**
      * A getter method.
