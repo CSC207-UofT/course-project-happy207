@@ -57,7 +57,7 @@ public class Flight {
         this.boardingGate = boardingGate;
         this.seatNumberArray = seatNumberArray;
 
-        this.price =(int) (distanceTraveled * 0.2 + 100);
+        this.price = (int) (distanceTraveled * 0.2 + 100);
 
 
         // set departure and arrival time
