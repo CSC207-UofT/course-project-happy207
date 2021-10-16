@@ -8,11 +8,9 @@
  * seat capacity (total seat numbers) and number of available seat
  * boarding gate
  * the array of seat numbers
-
  */
 
 import java.time.LocalDateTime;
-//import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
@@ -29,7 +27,7 @@ public class Flight {
     private String boardingGate;
     private ArrayList<String> seatNumberArray;
     private int availableSeats;
-    private float price;
+    private int price;
 
 
 
@@ -86,7 +84,7 @@ public class Flight {
      * A getter method.
      * @return price of this flight
      */
-    public float getPrice(){return this.price;}
+    public int getPrice(){return this.price;}
 
 
     /**
@@ -176,7 +174,8 @@ public class Flight {
         return "Flight " + flightNumber +
                 " \n from " + originCity + " to " + destinationCity +
                 "\n from " + formattedDepartureTime + " to " + formattedArrivalTime +
-                "\n boarding gate: " + boardingGate;
+                "\n boarding gate: " + boardingGate+
+                "\n price:" +price;
         }
 
     }
