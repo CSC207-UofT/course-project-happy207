@@ -49,7 +49,7 @@ public class LoginSystem {
 
     public static void main(String[] args) throws IOException {
         System.out.println(checkUsername("Ryan"));
-        addData("HOLA", "mypassword", "HOLALA", "users.csv");
+        addData("HOLA", "myPassword", "RF", "users.csv");
         System.out.println(checkUsername("HOLA"));
     }
 }
