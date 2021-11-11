@@ -1,5 +1,4 @@
-UserName, Password, FullName
+UserName, Password, FullName, Balance, Milage, Membership, Membershipt_level, redeem_points
 Ryan,123,Ryan Fang
 Olivia,paswd,Yefan Jiang
 Rumonthebeat,333aaa,Chuan Liu
-
